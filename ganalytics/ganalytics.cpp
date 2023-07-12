@@ -20,6 +20,8 @@
 GAnalytics::GAnalytics(QObject *parent) : QObject(parent)
 {
     d = new GAnalyticsWorker(this);
+
+    connect(d, &GAnalyticsWorker::sigSendResp, this, &GAnalytics::sigSendResp);
 }
 
 /**

@@ -58,6 +58,7 @@ void GAnalyticsWorker::logMessage(GAnalytics::LogLevel level, const QString &mes
     }
 
     qDebug() << "[Analytics]" << message;
+    emit sigSendResp("[Analytics]" + message);
 }
 
 /**

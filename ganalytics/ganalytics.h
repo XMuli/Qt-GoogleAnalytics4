@@ -55,6 +55,9 @@ public:
     void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
     QNetworkAccessManager *networkAccessManager() const;
 
+signals:
+    void sigSendResp(const QString& msg);
+
 public slots:
     void sendEvent(const QString &category, const QString &eventName, const QString &eventParamName = QString(), const QString &eventParamValue = QString());
 	void sendEvent(const QString &eventName);

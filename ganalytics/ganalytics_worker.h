@@ -61,6 +61,9 @@ public:
     void setIsSending(bool doSend);
     void enable(bool state);
 
+signals:
+    void sigSendResp(const QString& msg);
+
 public slots:
     void postMessage();
     void postMessageFinished();
